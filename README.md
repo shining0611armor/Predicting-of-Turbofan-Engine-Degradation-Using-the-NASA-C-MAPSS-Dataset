@@ -40,7 +40,7 @@ import pandas as pd
 
 <p>The dataset used is the Turbofan Engine Degradation dataset from NASA's C-MAPSS collection. This dataset includes sensor outputs from a set of simulated turbofan jet engines. The sensor outputs are recorded as time-series data.</p>
 
-<img src="ّImages\screenshot009.png" alt="Dataset Example" style="width:30%;">
+<img src="ّImages/screenshot009.png" alt="Dataset Example" style="width:30%;">
 
 <p>In the training dataset, the engine starts operating normally until a fault occurs, which gradually increases. In the training dataset, this fault escalation continues until failure, after which no data is recorded.</p>
 
