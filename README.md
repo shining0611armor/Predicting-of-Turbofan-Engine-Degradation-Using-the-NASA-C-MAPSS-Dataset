@@ -161,7 +161,7 @@ test_df[features_to_normalize] = scaler.transform(test_df[features_to_normalize]
 
 
 
-<h3>Data Labeling Implementation</h3>
+<h3>Data Labeling </h3>
 
 <p>Now we need to create labels for each of the datasets.</p>
 
