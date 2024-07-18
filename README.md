@@ -101,9 +101,12 @@ columns_to_remove = ['rows', 'op_setting_3', 'sensor_1', 'sensor_5', 'sensor_10'
 train_df.drop(columns=columns_to_remove, inplace=True)
 test_df.drop(columns=columns_to_remove, inplace=True)
 </code></pre>
-<img src="Images/screenshot007.png" alt="Data Selection Applied to Training Dataset" style="width:30%;" class="center">
-
+<img src="Images/screenshot005.png" alt="Data Selection applied to the training dataset" style="width:30%;" class="center">
 <p><em>Figure 1: Data Selection applied to the training dataset.</em></p>
+
+<img src="Images/screenshot010.png" alt="Data Selection applied to the test dataset" style="width:30%;" class="center">
+<p><em>Figure 2: Data Selection applied to the test dataset.</em></p>
+
 
 <p>As shown in Figure 1, the specified columns have been removed from the dataset. This process is repeated for the test dataset. Note that the first two columns are not involved in the training process and will be separated in later stages. The same process is applied to the test dataset, and finally, 18 features are selected for training and testing.</p>
 
