@@ -66,10 +66,10 @@ Conditions: ONE (Sea Level)
 Fault Modes: ONE (HPC Degradation)
 </code></pre>
 
-<img src="Images/screenshot005.png" alt="Training dataset before preprocessing" style="width:30%;" class="center">
+<img src="Images/screenshot005.png" alt="Training dataset before preprocessing" style="width:90%;" class="center">
 <p><em>Figure 1: Training dataset before preprocessing.</em></p>
 
-<img src="Images/screenshot010.png" alt="Test dataset before preprocessing" style="width:30%;" class="center">
+<img src="Images/screenshot010.png" alt="Test dataset before preprocessing" style="width:90%;" class="center">
 <p><em>Figure 2: Test dataset before preprocessing.</em></p>
 
 
@@ -109,7 +109,7 @@ columns_to_remove = ['rows', 'op_setting_3', 'sensor_1', 'sensor_5', 'sensor_10'
 train_df.drop(columns=columns_to_remove, inplace=True)
 test_df.drop(columns=columns_to_remove, inplace=True)
 </code></pre>
-<img src="Images/screenshot007.png" alt="Data Selection applied to the training dataset" style="width:30%;" class="center">
+<img src="Images/screenshot007.png" alt="Data Selection applied to the training dataset" style="width:90%;" class="center">
 <p><em>Figure 3: Data Selection applied to the training dataset.</em></p>
 
 
