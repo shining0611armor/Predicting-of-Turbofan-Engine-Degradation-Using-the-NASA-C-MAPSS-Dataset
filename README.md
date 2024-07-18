@@ -101,8 +101,8 @@ columns_to_remove = ['rows', 'op_setting_3', 'sensor_1', 'sensor_5', 'sensor_10'
 train_df.drop(columns=columns_to_remove, inplace=True)
 test_df.drop(columns=columns_to_remove, inplace=True)
 </code></pre>
+<img src="Images/screenshot007.png" alt="Data Selection Applied to Training Dataset" style="width:30%;" class="center">
 
-<img src="screenshot007" alt="Data Selection Applied to Training Dataset" />
 <p><em>Figure 1: Data Selection applied to the training dataset.</em></p>
 
 <p>As shown in Figure 1, the specified columns have been removed from the dataset. This process is repeated for the test dataset. Note that the first two columns are not involved in the training process and will be separated in later stages. The same process is applied to the test dataset, and finally, 18 features are selected for training and testing.</p>
@@ -196,8 +196,7 @@ sorted_max_cycles = max_cycles.sort_values(by='engine_number').reset_index(drop=
 <p>After finding the maximum cycle for each engine, we increase the cycle linearly from the last cycle to the length of the window. After that, we consider its value fixed, equal to the window length (considered from the last to the first). We repeat this process for all units or engines so that all data is labeled.</p>
 
 <p>For example, we label the first engine piece-wise as shown below.</p>
-
-<img src="screenshot013" alt="Piece-wise linear labeling for the first engine" />
+<img src="Images/screenshot013.png" alt="Piece-wise linear labeling for the first engine" style="width:30%;" class="center">
 
 <p><em>Figure: Piece-wise linear labeling for the first engine</em></p>
 
