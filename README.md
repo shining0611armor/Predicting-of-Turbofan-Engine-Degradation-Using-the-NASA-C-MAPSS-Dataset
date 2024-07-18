@@ -86,11 +86,7 @@ test_df = test_df.iloc[1:].reset_index(drop=True)
 
 <p>The goal of working with this dataset is to predict the number of operational cycles remaining before failure, as creating a warning system before failure is crucial. Naturally, if the degradation falls below a certain threshold, it indicates failure.</p>
 
-preprocessin of dataset including 4 step:
 
-Data selection - data normalization - Data labeling - time windowing 
-
-<h2>Preprocessing of Dataset</h2>
 
 <p>The preprocessing of the dataset includes four steps: Data Selection, Data Normalization, Data Labeling, and Time Windowing.</p>
 
