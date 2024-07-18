@@ -66,6 +66,14 @@ Conditions: ONE (Sea Level)
 Fault Modes: ONE (HPC Degradation)
 </code></pre>
 
+<img src="Images/screenshot005.png" alt="Training dataset before preprocessing" style="width:30%;" class="center">
+<p><em>Figure 1: Training dataset before preprocessing.</em></p>
+
+<img src="Images/screenshot010.png" alt="Test dataset before preprocessing" style="width:30%;" class="center">
+<p><em>Figure 2: Test dataset before preprocessing.</em></p>
+
+
+
 <p>To work with this dataset, we can read the CSV files as shown below (for convenience we also convert this dataset in CSV file), or use the original text files. We have examined both methods.</p>
 
 <pre><code class="python">
@@ -94,21 +102,18 @@ test_df = test_df.iloc[1:].reset_index(drop=True)
 
 <p>In the Data Selection phase, sensors that do not show significant changes with the increase of the life cycle are removed from the dataset. These sensors do not provide valuable information for determining the Remaining Useful Life (RUL) and only add complexity to the network. According to the reference paper, the following columns are removed: <code>c3</code>, <code>s1</code>, <code>s5</code>, <code>s10</code>, <code>s16</code>, <code>s19</code>. We follow the same approach in this implementation and remove the specified columns, although a few other columns could also be removed.</p>
 
-<p>After applying Data Selection, the training dataset is as shown in Figure 1. The same operations are applied to the test dataset.</p>
+<p>After applying Data Selection, the training dataset is as shown in Figure 3. The same operations are applied to the test dataset.</p>
 
 <pre><code># we remove the specified columns
 columns_to_remove = ['rows', 'op_setting_3', 'sensor_1', 'sensor_5', 'sensor_10', 'sensor_16', 'sensor_19']
 train_df.drop(columns=columns_to_remove, inplace=True)
 test_df.drop(columns=columns_to_remove, inplace=True)
 </code></pre>
-<img src="Images/screenshot005.png" alt="Data Selection applied to the training dataset" style="width:90%;" class="center">
-<p><em>Figure 1: Data Selection applied to the training dataset.</em></p>
-
-<img src="Images/screenshot010.png" alt="Data Selection applied to the test dataset" style="width:90%;" class="center">
-<p><em>Figure 2: Data Selection applied to the test dataset.</em></p>
+<img src="Images/screenshot007.png" alt="Data Selection applied to the training dataset" style="width:30%;" class="center">
+<p><em>Figure 3: Data Selection applied to the training dataset.</em></p>
 
 
-<p>As shown in Figure 1, the specified columns have been removed from the dataset. This process is repeated for the test dataset. Note that the first two columns are not involved in the training process and will be separated in later stages. The same process is applied to the test dataset, and finally, 18 features are selected for training and testing.</p>
+<p>As shown in Figure 3, the specified columns have been removed from the dataset. This process is repeated for the test dataset. Note that the first two columns are not involved in the training process and will be separated in later stages. The same process is applied to the test dataset, and finally, 18 features are selected for training and testing.</p>
 
 <p>If processing directly from the original text file, the corresponding sensor columns are identified and removed based on their indices. The columns to be removed are:</p>
 
