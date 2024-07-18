@@ -86,6 +86,78 @@ test_df = test_df.iloc[1:].reset_index(drop=True)
 
 <p>The goal of working with this dataset is to predict the number of operational cycles remaining before failure, as creating a warning system before failure is crucial. Naturally, if the degradation falls below a certain threshold, it indicates failure.</p>
 
+preprocessin of dataset including 4 step:
+
+Data selection - data normalization - Data labeling - time windowing 
+
+<h2>Preprocessing of Dataset</h2>
+
+<p>The preprocessing of the dataset includes four steps: Data Selection, Data Normalization, Data Labeling, and Time Windowing.</p>
+
+<h3>Data Selection</h3>
+
+<p>In the Data Selection phase, sensors that do not show significant changes with the increase of the life cycle are removed from the dataset. These sensors do not provide valuable information for determining the Remaining Useful Life (RUL) and only add complexity to the network. According to the reference paper, the following columns are removed: <code>c3</code>, <code>s1</code>, <code>s5</code>, <code>s10</code>, <code>s16</code>, <code>s19</code>. We follow the same approach in this implementation and remove the specified columns, although a few other columns could also be removed.</p>
+
+<p>After applying Data Selection, the training dataset is as shown in Figure 1. The same operations are applied to the test dataset.</p>
+
+<pre><code># we remove the specified columns
+columns_to_remove = ['rows', 'op_setting_3', 'sensor_1', 'sensor_5', 'sensor_10', 'sensor_16', 'sensor_19']
+train_df.drop(columns=columns_to_remove, inplace=True)
+test_df.drop(columns=columns_to_remove, inplace=True)
+</code></pre>
+
+<img src="screenshot007" alt="Data Selection Applied to Training Dataset" />
+<p><em>Figure 1: Data Selection applied to the training dataset.</em></p>
+
+<p>As shown in Figure 1, the specified columns have been removed from the dataset. This process is repeated for the test dataset. Note that the first two columns are not involved in the training process and will be separated in later stages. The same process is applied to the test dataset, and finally, 18 features are selected for training and testing.</p>
+
+<p>If processing directly from the original text file, the corresponding sensor columns are identified and removed based on their indices. The columns to be removed are:</p>
+
+<pre><code>[0, 1, 4, 5, 9, 14, 20, 23]
+</code></pre>
+
+<p>Thus, these columns are removed from the dataset. For example, after removing these columns from the test dataset, the following code is used:</p>
+
+<pre><code># Data Selection implementation
+engine_time_df = test_df[['engine_number', 'time_in_cycles']].copy()
+columns_to_be_dropped1 = [0, 1, 4, 5, 9, 14, 20, 23]
+
+columns_to_be_dropped = ['engine_number', 'time_in_cycles', 'rows', 'op_setting_3', 'sensor_1', 'sensor_5', 'sensor_10', 'sensor_16', 'sensor_19']
+
+test_data_dropped = test_data.drop(columns=columns_to_be_dropped1)
+test_df_dropped = test_df.drop(columns=columns_to_be_dropped)
+</code></pre>
+
+<h3>Data Normalization</h3>
+
+<p>Since the data is captured from various sensors, they have different ranges. Some sensors may have large measurements while others may have smaller values. Encountering different scales of values (very large or very small) can make the learning process difficult for the network. This can impose unnecessary heavy computations and cause computational saturation in the network, potentially biasing the network towards features with large values. To prevent this, normalization and standardization techniques are used. According to the approach presented in the reference paper, sensor features are initially mapped to the range of 0 to 1 using the following formula.</p>
+
+<p>After Data Selection:</p>
+
+<img src="capture1" alt="" />
+
+<pre><code>from sklearn.preprocessing import MinMaxScaler
+
+features_to_normalize = train_df.columns[3:]
+
+train_df[features_to_normalize] = train_df[features_to_normalize].apply(pd.to_numeric, errors='coerce')
+test_df[features_to_normalize] = test_df[features_to_normalize].apply(pd.to_numeric, errors='coerce')
+
+# we use the min-max-scaler in sklearn lib
+scaler = MinMaxScaler()
+train_df[features_to_normalize] = scaler.fit_transform(train_df[features_to_normalize])
+test_df[features_to_normalize] = scaler.transform(test_df[features_to_normalize])
+</code></pre>
+
+<p>After applying Data Normalization, the training dataset is as shown in Figure 2. The same normalization is applied to the test dataset as well.</p>
+
+<img src="screenshot011" alt="Normalized Test Dataset" />
+<p><em>Figure 2: Normalized test dataset.</em></p>
+
+<img src="screenshot012" alt="Normalized Training Dataset" />
+<p><em>Figure 3: Normalized training dataset.</em></p>
+
+
 <h2 id="model-implementation">Model Implementation</h2>
 
 <p>The implementation includes training a machine learning model to predict the remaining useful life of the engines based on the preprocessed dataset. The model's performance is evaluated using standard metrics to ensure its accuracy and reliability.</p>
