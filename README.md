@@ -66,7 +66,7 @@ Conditions: ONE (Sea Level)
 Fault Modes: ONE (HPC Degradation)
 </code></pre>
 
-<p>To work with this dataset, we can read the CSV files as shown below, or use the original text files. We have examined both methods.</p>
+<p>To work with this dataset, we can read the CSV files as shown below (for convenience we also convert this dataset in CSV file), or use the original text files. We have examined both methods.</p>
 
 <pre><code class="python">
 import pandas as pd
