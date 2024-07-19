@@ -137,8 +137,7 @@ test_df_dropped = test_df.drop(columns=columns_to_be_dropped)
 <p>Since the data is captured from various sensors, they have different ranges. Some sensors may have large measurements while others may have smaller values. Encountering different scales of values (very large or very small) can make the learning process difficult for the network. This can impose unnecessary heavy computations and cause computational saturation in the network, potentially biasing the network towards features with large values. To prevent this, normalization and standardization techniques are used. According to the approach presented in the reference paper, sensor features are initially mapped to the range of 0 to 1 using the following formula.</p>
 
 <p>After Data Selection:</p>
-
-<img src="capture1" alt="" />
+<img src="Images/capture1.png" alt="" style="width: 30  %;" class="center">
 
 <pre><code>from sklearn.preprocessing import MinMaxScaler
 
@@ -154,12 +153,11 @@ test_df[features_to_normalize] = scaler.transform(test_df[features_to_normalize]
 </code></pre>
 
 <p>After applying Data Normalization, the training dataset is as shown in Figure 2. The same normalization is applied to the test dataset as well.</p>
+<img src="Images/screenshot011.png" alt="Normalized Test Dataset" style="width: 100  %;" class="center">
+<p><em>Figure 4: Normalized test dataset.</em></p>
 
-<img src="screenshot011" alt="Normalized Test Dataset" />
-<p><em>Figure 2: Normalized test dataset.</em></p>
-
-<img src="screenshot012" alt="Normalized Training Dataset" />
-<p><em>Figure 3: Normalized training dataset.</em></p>
+<img src="Images/screenshot012.png" alt="Normalized Training Dataset" style="width: 100  %;" class="center">
+<p><em>Figure 5: Normalized training dataset.</em></p>
 
 
 
@@ -204,9 +202,10 @@ sorted_max_cycles = max_cycles.sort_values(by='engine_number').reset_index(drop=
 <p>After finding the maximum cycle for each engine, we increase the cycle linearly from the last cycle to the length of the window. After that, we consider its value fixed, equal to the window length (considered from the last to the first). We repeat this process for all units or engines so that all data is labeled.</p>
 
 <p>For example, we label the first engine piece-wise as shown below.</p>
-<img src="Images/screenshot013.png" alt="Piece-wise linear labeling for the first engine" style="width:30%;" class="center">
 
-<p><em>Figure: Piece-wise linear labeling for the first engine</em></p>
+<img src="Images/screenshot013.png" alt="Piece-wise linear labeling for the first engine" style="width: 80  %;" class="center">
+<p><em>Figure 6: Piece-wise linear labeling for the first.</em></p>
+
 
 <pre><code>0      130
 1      130
@@ -226,7 +225,11 @@ Name: RUL, Length: 192, dtype: int64
 
 <p>After labeling, the training dataset will look like this:</p>
 
-<img src="screenshot014" alt="Labeled training dataset" />
+<img src="Images/screenshot014.png" alt="Labeled training dataset" style="width: 100  %;" class="center">
+<p><em>Figure 7: Labeled training datasetLabeled training dataset.</em></p>
+
+
+
 
 <p><em>Figure: Labeled training dataset</em></p>
 
@@ -264,6 +267,10 @@ Name: 1, Length: 101, dtype: object
 <p>The RUL-y column value is then added to the RUL-x column, and the final label for each row of the dataframe is stored in the RUL column.</p>
 
 <img src="screenshot018" alt="Explaining the labeling for the first unit" />
+
+<img src="Images/screenshot018.png" alt="Explaining the labeling for the first unit" style="width: 100  %;" class="center">
+<p><em>Figure 8: Explaining the labeling for the first unit.</em></p>
+
 
 <p><em>Figure: Explaining the labeling and showing it for the first unit</em></p>
 
@@ -464,7 +471,7 @@ weighted avg       0.96      0.96      0.96     10196
 <h2 id="references">References</h2>
 
 <ul>
-    <li>Shcherbakov, et al., 2022. [Reference Paper Title]</li>
+    <li>Shcherbakov, M., & Sai, C. (2022). A hybrid deep learning framework for intelligent predictive maintenance of cyber-physical systems. ACM Transactions on Cyber-Physical Systems (TCPS), 6(2), 1-22.</li>
 </ul>
 
 </body>
