@@ -266,29 +266,28 @@ Name: 1, Length: 101, dtype: object
 
 <p>The RUL-y column value is then added to the RUL-x column, and the final label for each row of the dataframe is stored in the RUL column.</p>
 
-<img src="screenshot018" alt="Explaining the labeling for the first unit" />
 
 <img src="Images/screenshot018.png" alt="Explaining the labeling for the first unit" style="width: 100  %;" class="center">
-<p><em>Figure 8: Explaining the labeling for the first unit.</em></p>
-
-
-<p><em>Figure: Explaining the labeling and showing it for the first unit</em></p>
+<p><em>Figure 8: Explaining the labeling and showing it for the first unit.</em></p>
 
 <p>Next, based on the distribution of the training dataset and its piece-wise linear labeling, we apply similar processing to the test dataset to ensure the labeling method is consistent with the training dataset. A lambda function is used for thresholding with a value of 130 for regression and 50 for classification, as per the reference paper. Values greater than 130 are limited to this value for regression, and for classification, binary labels of 0 and 1 are assigned based on whether they are below or above the RUL value of 50, respectively.</p>
 
-<img src="screenshot019" alt="Implementation code for labeling test data" />
 
-<p><em>Figure: Implementation code for labeling test data</em></p>
+<img src="Images/screenshot019.png" alt="Implementation code for labeling test data" style="width: 70  %;" class="center">
+<p><em>Figure 9: Implementation code for labeling test data.</em></p>
 
 <p>The thresholding process is shown in the figure below.</p>
 
-<img src="screenshot021" alt="Thresholding for test data (similar for train data)" />
+<img src="Images/screenshot021.png" alt="Thresholding for test data (similar for train data)" style="width: 70  %;" class="center">
+<p><em>Figure 10: Thresholding for test data (similar for train data).</em></p>
 
-<p><em>Figure: Thresholding for test data (similar for train data)</em></p>
 
 <p>After thresholding and removing auxiliary columns, the labeled data for the first unit will look like this:</p>
 
-<img src="screenshot022" alt="Labeled test data for the first unit" />
+<img src="Images/screenshot022.png" alt="Labeled test data for the first unit" style="width: 100  %;" class="center">
+<p><em>Figure 11: Labeled test data for the first unit.</em></p>
+
+
 
 <p><em>Figure: Labeled test data for the first unit as an example</em></p>
 
@@ -297,10 +296,8 @@ Name: 1, Length: 101, dtype: object
 <p>For processing time signals, we need to generate time windows. We choose windows of length 30 because the window length should be less than the length of the shortest record, and the shortest record in the dataset is 31. According to the paper, each window's step is considered to be 1. We create all windows by iterating through each unit or engine in the outer loop and from the maximum cycle for each engine to the window length in the inner loop. This way, a window of length 30 is created from the last cycle. We slide the window up to include all data, then move to the next engine.</p>
 
 <p>Each window is labeled with the label corresponding to the last data (row) of the window.</p>
-
-<img src="screenshot015" alt="Creating time windows for the training dataset for regression" />
-
-<p><em>Figure: Creating time windows for the training dataset for regression</em></p>
+<img src="Images/screenshot015.png" alt="Creating time windows for the training dataset for regression" style="width: 100  %;" class="center">
+<p><em>Figure 12: Creating time windows for the training dataset for regression.</em></p>
 
 <p>This way, time windows are implemented for regression, and the shape of the entire training dataset will be as follows:</p>
 
@@ -310,17 +307,17 @@ Processed training targets labels shape:  (17731,)
 
 <p>For classification, we repeat the mentioned steps, but we use the last column (label) as the label for each window instead of the RUL column.</p>
 
-<img src="screenshot016" alt="Creating time windows for the training dataset for classification" />
 
-<p><em>Figure: Creating time windows for the training dataset for classification</em></p>
+<img src="Images/screenshot016.png" alt="Creating time windows for the training dataset for classification" style="width: 100  %;" class="center">
+<p><em>Figure 13: Creating time windows for the training dataset for classification.</em></p>
+
 
 <p>Thus, the entire training data is converted into 17731 windows of 30 with 18 features.</p>
 
 <p>The windowing process and code for the test data are identical to the training data windowing. However, for testing, we only consider the last window. In this case, the inner loop is removed, and we only take the last data corresponding to the maximum cycle for a window of length 30. The label is the actual RUL value from the RUL-FD001.csv file for each engine.</p>
 
-<img src="screenshot023" alt="Implementation of windowing based on last window" />
-
-<p><em>Figure: Implementation of windowing based on the last window</em></p>
+<img src="Images/screenshot023.png" alt="Implementation of windowing based on last window" style="width: 100  %;" class="center">
+<p><em>Figure 14: Implementation of windowing based on the last window.</em></p>
 
 <p>The overall output of the test dataset after windowing will be as follows:</p>
 
