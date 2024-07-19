@@ -436,12 +436,16 @@ weighted avg       0.96      0.96      0.96     10196
 
 <p>Additionally, we considered test data as only the last window of data for comparison. As expected, due to the smaller size and potential noise in test data, the accuracy is lower than the previous scenario (implemented out of curiosity, not in the paper due to low accuracy).</p>
 
-<img src="screenshot032" alt="Test accuracy for only the last 100 RUL data points" />
-<p><em>Figure: Test accuracy for only the last 100 RUL data points</em></p>
+
+<img src="Images/screenshot032.png" alt="Test accuracy for only the last 100 RUL data points" style="width: 100  %;" class="center">
+<p><em>Figure 21: Test accuracy for only the last 100 RUL data points</em></p>
+
 
 <p>The metrics for this scenario (for 100 test data points) are shown below:</p>
 
-<img src="screenshot034" alt="Screenshot 034" />
+
+<img src="Images/screenshot034.png"  style="width: 100  %;" class="center">
+
 
 
 
