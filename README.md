@@ -329,15 +329,6 @@ True RUL Labels shape:  (10196,)
 
 <p>The values obtained for the test and train data match the values mentioned in the paper.</p>
 
-<p>All preprocessing steps for the regression and classification tasks are shown in the figures below.</p>
-
-<img src="screenshot024" alt="All preprocessing steps for test and train datasets for regression task" />
-
-<p><em>Figure: All preprocessing steps for test and train datasets for the regression task</em></p>
-
-<img src="screenshot025" alt="All preprocessing steps for test and train datasets for classification task" />
-
-<p><em>Figure: All preprocessing steps for test and train datasets for the classification task</em></p>
 
 <h3>Model Training - Classification</h3>
 
