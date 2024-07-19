@@ -335,15 +335,22 @@ True RUL Labels shape:  (10196,)
 <p>In this section, we train the CNN-LSTM model according to the settings described in the reference paper <cite>Shcherbakov2022</cite>. 
 First, we ensure that our settings match the paper's settings for training and testing.</p>
 
-<img src="screenshot026" alt="Parameter settings for the classification section in the reference paper" />
-<p><em>Figure: Parameter settings for the classification section in the reference paper <cite>Shcherbakov2022</cite></em></p>
+<img src="Images/screenshot026.png" alt="Parameter settings for the classification section in the reference paper" style="width: 100  %;" class="center">
+<p><em>Figure 15: Parameter settings for the classification section in the reference paper<cite>Shcherbakov2022</cite></em></p>
+
+
+
+
+
+
 
 <p>According to the reference paper, 17631 data points were used for training, and 10096 data points were used for testing. This means that all windows were considered for training and testing, which matches the values obtained in the preprocessing section of this report. Additionally, the number of Faulty condition and Healthy condition labels matches our obtained values (as seen in the confusion matrix).</p>
 
 <p>For all training scenarios, whether for classification or regression, we split 20% of the training dataset for validation.</p>
 
-<img src="screenshot027" alt="Dataset split" />
-<p><em>Figure: Dataset split</em></p>
+<img src="Images/screenshot027.png" alt="Dataset split" style="width: 100  %;" class="center">
+<p><em>Figure 16: Dataset split<cite>Shcherbakov2022</cite></em></p>
+
 
 <pre><code>Processed train data shape:  (14184, 30, 18)
 Processed validation data shape:  (3547, 30, 18)
@@ -378,13 +385,14 @@ _________________________________________________________________
 
 <p>Then we train the model with the following settings, exactly as in the paper.</p>
 
-<img src="screenshot028" alt="Implementation of Classification section without EarlyStopping with the settings of the reference paper" />
-<p><em>Figure: Implementation of Classification section without EarlyStopping with the settings of the reference paper</em></p>
+<img src="Images/screenshot028.png" alt="Implementation of Classification section without EarlyStopping with the settings of the reference paper" style="width: 100  %;" class="center">
+<p><em>Figure 17: Implementation of Classification section without EarlyStopping with the settings of the reference paper</em></p>
 
-<p>In this section, as requested by the paper, we use 100 epochs. Also, the batch size is set to 200, and the learning rate is set to 0.001. The Adam optimizer is used as the optimizer.</p>
+<p>In this section we use 100 epochs. Also, the batch size is set to 200, and the learning rate is set to 0.001. The Adam optimizer is used as the optimizer.</p>
 
-<img src="screenshot029" alt="Accuracy and error curves during training" />
-<p><em>Figure: Accuracy and error curves during training</em></p>
+<img src="Images/screenshot029.png" alt="Accuracy and error curves during training" style="width: 100  %;" class="center">
+<p><em>Figure 18: Accuracy and error curves during training</em></p>
+
 
 <p>As seen in the curves, the model experiences slight overfitting towards the end, which will be addressed in the next section by utilizing early stopping. This will terminate training upon observing potential overfitting, before accuracy drops on evaluation curves, and save the model. Therefore, better results are expected with early stopping. Nonetheless, the model still achieved high accuracy on the test set in this scenario, with increasing accuracy and decreasing error curves for train and validation data, respectively. However, after approximately 40 epochs, the variance between training and evaluation data increases, potentially increasing generalization error. One way to counteract this is by using early stopping, which will be implemented in the next section.</p>
 
@@ -401,13 +409,16 @@ macro avg       0.89      0.87      0.88     10196
 weighted avg       0.96      0.96      0.96     10196
 </code></pre>
 
-<img src="screenshot030" alt="Confusion matrix for CNN-LSTM without Early-Stopping" />
-<p><em>Figure: Confusion matrix for CNN-LSTM without Early-Stopping</em></p>
+<img src="Images/screenshot030.png" alt="Confusion matrix for CNN-LSTM without Early-Stopping" style="width: 100  %;" class="center">
+<p><em>Figure 19: Confusion matrix for CNN-LSTM without Early-Stopping</em></p>
+
 
 <p>As seen from the confusion matrix, the algorithm achieved high accuracy on Class 1 and reasonable accuracy on Class 2 (considering the class imbalance). The algorithm effectively differentiates between classes, achieving high accuracy and F1-Score.</p>
 
-<img src="screenshot031" alt="ROC curve for the test dataset" />
-<p><em>Figure: ROC curve for the test dataset</em></p>
+<img src="Images/screenshot031.png" alt="ROC curve for the test dataset" style="width: 100  %;" class="center">
+<p><em>Figure 20: ROC curve for the test dataset</em></p>
+
+
 
 <p>The ROC curve in the figure <em>Figure: ROC curve for the test dataset</em> shows the model's good performance on the test dataset due to the following reasons:</p>
 
@@ -420,7 +431,9 @@ weighted avg       0.96      0.96      0.96     10196
 
 <p>Given the high area under the ROC curve and its steepness at the beginning, it can be concluded that this algorithm performs well on the dataset, accurately distinguishing between positive and negative samples.</p>
 
-<img src="screenshot033" alt="Screenshot 033" />
+<img src="Images/screenshot033.png" style="width: 100  %;" class="center">
+<p><em>Figure 21</em></p>
+
 
 <p>Additionally, we considered test data as only the last window of data for comparison. As expected, due to the smaller size and potential noise in test data, the accuracy is lower than the previous scenario (implemented out of curiosity, not in the paper due to low accuracy).</p>
 
