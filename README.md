@@ -431,8 +431,7 @@ weighted avg       0.96      0.96      0.96     10196
 
 <p>Given the high area under the ROC curve and its steepness at the beginning, it can be concluded that this algorithm performs well on the dataset, accurately distinguishing between positive and negative samples.</p>
 
-<img src="Images/screenshot033.png" style="width: 100  %;" class="center">
-<p><em>Figure 21</em></p>
+<img src="Images/screenshot033.png" style="width: 40  %;" class="center">
 
 
 <p>Additionally, we considered test data as only the last window of data for comparison. As expected, due to the smaller size and potential noise in test data, the accuracy is lower than the previous scenario (implemented out of curiosity, not in the paper due to low accuracy).</p>
