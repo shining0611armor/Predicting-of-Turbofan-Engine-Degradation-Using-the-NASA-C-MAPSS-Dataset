@@ -285,11 +285,8 @@ Name: 1, Length: 101, dtype: object
 <p>After thresholding and removing auxiliary columns, the labeled data for the first unit will look like this:</p>
 
 <img src="Images/screenshot022.png" alt="Labeled test data for the first unit" style="width: 100  %;" class="center">
-<p><em>Figure 11: Labeled test data for the first unit.</em></p>
+<p><em>Figure 11: Labeled test data for the first unit as an example.</em></p>
 
-
-
-<p><em>Figure: Labeled test data for the first unit as an example</em></p>
 
 <h3>Time Windowing</h3>
 
