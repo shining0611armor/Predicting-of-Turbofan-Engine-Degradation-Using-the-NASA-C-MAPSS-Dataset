@@ -557,9 +557,7 @@ regression CNN-LSTM with early stopping - last window
 
 
 <p> Typically, we expect that using all windows would provide a better metric for evaluating the test data, as considering only the last window could be more susceptible to noise. However, in this example, according to the provided  curve, it is observed that with an increase in the RUL value, and especially in the middle values, the error increases from the actual values due to the higher RUL values (while it should be noted that the actual and estimated RUL values are quite close to each other, and the obtained curve matches well with the curve obtained in the paper).
-
 Therefore, considering only the last window, which has the lowest RUL, can provide less error compared to considering all windows. Thus, in fewer cycles (especially in the middle cycles due to larger RUL values), the probability of error increases, which is why the paper uses the last window for evaluation and achieving better results. This can be inferred from our results as well, where using the last window provided better results compared to using all windows.
-
 The result obtained in this section, using Early-Stopping and the CNN-LSTM model, provides the optimal and closest result to the paper.</p>
 
 
