@@ -372,7 +372,7 @@ Processed validation targets shape:  (3547,)
 
 <h3>First Scenario: Classification with Early-stopping</h3>
 
-<p>First, we implement the optimized CNN-LSTM model described in the paper. All its parameters are implemented exactly as described in the paper.</p>
+<p>First, we implement the optimized CNN-LSTM model described in the paper. All its parameters are implemented exactly as described in the paper (other models and also without early stopping conditions can be seen in the attached .ipynb files.</p>
 
 <pre><code>Model: "sequential_11"
 _________________________________________________________________
