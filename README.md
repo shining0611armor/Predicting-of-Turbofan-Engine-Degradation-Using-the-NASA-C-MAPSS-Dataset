@@ -591,7 +591,7 @@ Feel free to reach out if you have any questions or suggestions:
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]([https://github.com/shining0611armor/Predicting-of-Turbofan-Engine-Degradation-Using-the-NASA-C-MAPSS-Dataset/blob/main/License])
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 Happy Learning! 😊
