@@ -8,7 +8,8 @@
 
 <p>This repository contains the implementation of a method to predict the remaining useful life (RUL) of turbofan engines based on the NASA C-MAPSS dataset. The approach is based on the reference paper by Shcherbakov et al., 2022, and includes data preprocessing, model training, and evaluation steps. We implement the network for multiple scenarios: regression and classification. For each scenario, we tried three network architectures: CNN-LSTM, LSTM, and CNN. Additionally, we investigate the effect of using early stopping in each case and demonstrate that early stopping provides better results. </p>
 
-<h2>Table of Contents</h2>
+## Table of Contents
+
 1. [Introduction](#introduction)
 2. [Dataset](#dataset)
 3. [Methodology](#methodology)
@@ -30,8 +31,6 @@
     - [Installation](#installation)
     - [Running the Code](#running-the-code)
 8. [License](#license)
-
-<h2 id="introduction">Introduction</h2>
 
 <p>The goal of this project is to develop an intelligent maintenance system for turbofan engines. By predicting the remaining useful life of these engines, we can plan maintenance activities more effectively, reduce downtime, and improve overall safety.</p>
 
