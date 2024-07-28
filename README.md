@@ -567,7 +567,7 @@ regression CNN-LSTM with early stopping - last window
 
 
 
-<h2 id="references">References</h2>
+<h2 📚 id="references">References</h2>
 
 <ul>
     <li>Shcherbakov, M., & Sai, C. (2022). A hybrid deep learning framework for intelligent predictive maintenance of cyber-physical systems. ACM Transactions on Cyber-Physical Systems (TCPS), 6(2), 1-22.</li>
@@ -587,6 +587,11 @@ Feel free to reach out if you have any questions or suggestions:
 - **Email**: mehrant.0611@gmail.com
 - **GitHub**: [shining0611armor](https://github.com/shining0611armor)
 
+## 📝 License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 Happy Learning! 😊
