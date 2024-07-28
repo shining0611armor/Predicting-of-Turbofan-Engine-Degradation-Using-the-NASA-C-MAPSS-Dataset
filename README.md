@@ -395,31 +395,40 @@ Non-trainable params: 0 (0.00 Byte)
 _________________________________________________________________
 </code></pre>
 
+
+
 <p>Then we train the model with the following settings, exactly as in the paper.</p>
 
-<img src="Images/screenshot000.png" alt="Implementation of Classification section with EarlyStopping with the settings of the reference paper" width="400">
+<p>In this section we use 100 epochs. Also, the batch size is set to 200, and the learning rate is set to 0.001. The Adam optimizer is used as the optimizer.</p>
+
+<img src="Images/screenshot035.png" alt="Implementation of Classification section with EarlyStopping with the settings of the reference paper" width="400">
 
 <p><em>Figure 17: Implementation of Classification section with EarlyStopping with the settings of the reference paper</em></p>
 
-<p>In this section we use 100 epochs. Also, the batch size is set to 200, and the learning rate is set to 0.001. The Adam optimizer is used as the optimizer.</p>
 
 <img src="Images/screenshot029.png" alt="Accuracy and error curves during training" style="width: 100  %;" class="center">
 <p><em>Figure 18: Accuracy and error curves during training</em></p>
 
 
-<p>As seen in the curves, the model experiences slight overfitting towards the end, which will be addressed in the next section by utilizing early stopping. This will terminate training upon observing potential overfitting, before accuracy drops on evaluation curves, and save the model. Therefore, better results are expected with early stopping. Nonetheless, the model still achieved high accuracy on the test set in this scenario, with increasing accuracy and decreasing error curves for train and validation data, respectively. However, after approximately 40 epochs, the variance between training and evaluation data increases, potentially increasing generalization error. One way to counteract this is by using early stopping, which will be implemented in the next section.</p>
+<p>As can be seen, the error and classification curves decrease and increase respectively. Due to the use of Early-Stopping, the training process is halted before the variance increases, which could lead to generalization error or overfitting on the training data. The better performance achieved using this simple technique is evident when comparing the results of this scenario with the previous one (without Early-Stopping).</p>
 
-<pre><code>319/319 [==============================] - 2s 3ms/step
-Precision: 0.9773383217530732
-Recall: 0.982062298603652
-F1-Score: 0.9796946155906778
-Accuracy: 0.962828560219694
+
+<pre><code>
+    
+319/319 [==============================] - 3s 5ms/step
+Precision: 0.9769148936170213
+Recall: 0.9863587540279269
+F1-Score: 0.98161411010155
+Accuracy: 0.9662612789329149
 precision    recall  f1-score   support
-Class 0       0.80      0.76      0.78     886
-Class 1       0.98      0.98      0.98     9310
-accuracy                          0.96     10196
-macro avg     0.89      0.87      0.88     10196
-weighted avg  0.96      0.96      0.96     10196
+
+Class 0       0.84      0.76      0.80     886
+Class 1       0.98      0.99      0.98     9310
+
+accuracy                          0.97     10196
+macro avg     0.91      0.87      0.89     10196
+weighted avg  0.97      0.97      0.97     10196
+
 </code></pre>
 
 <img src="Images/screenshot030.png" alt="Confusion matrix for CNN-LSTM without Early-Stopping" style="width: 100  %;" class="center">
