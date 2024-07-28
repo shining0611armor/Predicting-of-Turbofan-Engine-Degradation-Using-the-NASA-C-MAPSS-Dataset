@@ -401,9 +401,7 @@ _________________________________________________________________
 
 <p>In this section we use 100 epochs. Also, the batch size is set to 200, and the learning rate is set to 0.001. The Adam optimizer is used as the optimizer.</p>
 
-<img src="Images/screenshot035.png" alt="Implementation of Classification section with EarlyStopping with the settings of the reference paper" width="400">
 
-<p><em>Figure 17: Implementation of Classification section with EarlyStopping with the settings of the reference paper</em></p>
 
 
 <img src="Images/screenshot035.png" alt="Accuracy and error curves during training" style="width: 100  %;" class="center">
@@ -434,8 +432,9 @@ weighted avg  0.97      0.97      0.97     10196
 <p>As can be seen, the model's accuracy and performance increase by approximately one percent compared to the  scenario without Early-Stopping. Additionally, in this case, the model's accuracy, particularly for class 0, improves significantly, and the F1-score exceeds 98%(you can check the codes).</p>
 
 
-<img src="Images/screenshot036.png" alt="Confusion matrix for CNN-LSTM with Early-Stopping" style="width: 100  %;" class="center">
+<img src="Images/screenshot036.png" alt="Confusion matrix for CNN-LSTM with Early-Stopping" width="400">
 <p><em>Figure 19: Confusion matrix for CNN-LSTM without Early-Stopping</em></p>
+
 
 
 <p>As seen from the confusion matrix, the algorithm achieved high accuracy on Class 1 and reasonable accuracy on Class 2 (considering the class imbalance). The algorithm effectively differentiates between classes, achieving high accuracy and F1-Score.</p>
@@ -459,17 +458,17 @@ weighted avg  0.97      0.97      0.97     10196
 <img src="Images/screenshot038.png" style="width: 40%;" class="center">
 
 
-<p>Additionally, we considered test data as only the last window of data for comparison. As expected, due to the smaller size and potential noise in test data, the accuracy is lower than the previous scenario (implemented out of curiosity, not in the paper due to low accuracy).</p>
+<p> These results are for considering all of the windows. Additionally, we considered test data as only the last window of data for comparison. As expected, due to the smaller size and potential noise in test data, the accuracy is lower than the previous scenario (implemented out of curiosity, not in the paper due to low accuracy).</p>
 
 
-<img src="Images/screenshot032.png" alt="Test accuracy for only the last 100 RUL data points" style="width: 100  %;" class="center">
+<img src="Images/screenshot039.png" alt="Test accuracy for only the last 100 RUL data points" style="width: 100  %;" class="center">
 <p><em>Figure 21: Test accuracy for only the last 100 RUL data points</em></p>
 
 
 <p>The metrics for this scenario (for 100 test data points) are shown below:</p>
 
 
-<img src="Images/screenshot034.png"  style="width: 100  %;" class="center">
+<img src="Images/screenshot040.png"  style="width: 100  %;" class="center">
 
 
 
