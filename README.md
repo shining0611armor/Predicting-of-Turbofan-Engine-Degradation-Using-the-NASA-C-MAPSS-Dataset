@@ -370,7 +370,7 @@ Processed train targets shape:  (14184,)
 Processed validation targets shape:  (3547,)
 </code></pre>
 
-<h3>First Scenario: Classification without Early-stopping</h3>
+<h3>First Scenario: Classification with Early-stopping</h3>
 
 <p>First, we implement the optimized CNN-LSTM model described in the paper. All its parameters are implemented exactly as described in the paper.</p>
 
@@ -397,8 +397,9 @@ _________________________________________________________________
 
 <p>Then we train the model with the following settings, exactly as in the paper.</p>
 
-<img src="Images/screenshot028.png" alt="Implementation of Classification section without EarlyStopping with the settings of the reference paper" style="width: 100  %;" class="center">
-<p><em>Figure 17: Implementation of Classification section without EarlyStopping with the settings of the reference paper</em></p>
+<img src="Images/screenshot000.png" alt="Implementation of Classification section with EarlyStopping with the settings of the reference paper" width="400">
+
+<p><em>Figure 17: Implementation of Classification section with EarlyStopping with the settings of the reference paper</em></p>
 
 <p>In this section we use 100 epochs. Also, the batch size is set to 200, and the learning rate is set to 0.001. The Adam optimizer is used as the optimizer.</p>
 
@@ -414,11 +415,11 @@ Recall: 0.982062298603652
 F1-Score: 0.9796946155906778
 Accuracy: 0.962828560219694
 precision    recall  f1-score   support
-Class 0       0.80      0.76      0.78       886
-Class 1       0.98      0.98      0.98      9310
-accuracy                           0.96     10196
-macro avg       0.89      0.87      0.88     10196
-weighted avg       0.96      0.96      0.96     10196
+Class 0       0.80      0.76      0.78     886
+Class 1       0.98      0.98      0.98     9310
+accuracy                          0.96     10196
+macro avg     0.89      0.87      0.88     10196
+weighted avg  0.96      0.96      0.96     10196
 </code></pre>
 
 <img src="Images/screenshot030.png" alt="Confusion matrix for CNN-LSTM without Early-Stopping" style="width: 100  %;" class="center">
