@@ -9,7 +9,15 @@
 <p>This repository contains the implementation of a method to predict the remaining useful life (RUL) of turbofan engines based on the NASA C-MAPSS dataset. The approach is based on the reference paper by Shcherbakov et al., 2022, and includes data preprocessing, model training, and evaluation steps. We implement the network for multiple scenarios: <strong style="font-size:1.2em;">regression</strong> and <strong style="font-size:1.2em;">classification</strong>. For each scenario, we tried three network architectures: <strong style="font-size:1.2em;">CNN-LSTM</strong>, <strong style="font-size:1.2em;">LSTM</strong>, and <strong style="font-size:1.2em;">CNN</strong>. Additionally, we investigate the effect of using early stopping in each case and demonstrate that early stopping provides better results.</p>
 
 
+## Quick Access in Colab
 
+You can quickly access and run this project in Google Colab by clicking the following icon:
+
+This includes the implementation of all the mentioned models for both scenarios:
+
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shining0611armor/Predicting-of-Turbofan-Engine-Degradation-Using-the-NASA-C-MAPSS-Dataset
+/blob/main/CMAPSS-remaining life.ipynb)
 
 
 
