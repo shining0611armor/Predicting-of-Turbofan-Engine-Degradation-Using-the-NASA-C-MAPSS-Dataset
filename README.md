@@ -21,26 +21,23 @@ This includes the implementation of all the mentioned models for both scenarios:
 
 ## Table of Contents
 
-## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Quick Access in Colab](#quick-access-in-colab)
-3. [Table of Contents](#table-of-contents)
-4. [Data Preprocessing](#data-preprocessing)
+
+1. [Data Preprocessing](#data-preprocessing)
     1. [Dataset Description](#dataset-description)
     2. [Data Selection](#data-selection)
     3. [Data Normalization](#data-normalization)
     4. [Data Labeling](#data-labeling)
     5. [Time Windowing](#time-windowing)
-5. [Model Training](#model-training)
+2. [Model Training](#model-training)
     1. [Classification](#classification)
         1. [First Scenario: Classification with Early-stopping](#first-scenario-classification-with-early-stopping)
     2. [Regression](#regression)
         1. [Second Scenario: Regression with Early-stopping](#second-scenario-regression-with-early-stopping)
-6. [References](#references)
-7. [About the Instructor](#about-the-instructor)
-8. [Contact](#contact)
-9. [License](#license)
+3. [References](#references)
+4. [About the Instructor](#about-the-instructor)
+5. [Contact](#contact)
+6. [License](#license)
 
 <p>The goal of this project is to develop an intelligent maintenance system for turbofan engines. By predicting the remaining useful life of these engines, we can plan maintenance activities more effectively, reduce downtime, and improve overall safety.</p>
 
