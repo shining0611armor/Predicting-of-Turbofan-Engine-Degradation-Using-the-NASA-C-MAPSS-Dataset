@@ -406,7 +406,7 @@ _________________________________________________________________
 <p><em>Figure 17: Implementation of Classification section with EarlyStopping with the settings of the reference paper</em></p>
 
 
-<img src="Images/screenshot029.png" alt="Accuracy and error curves during training" style="width: 100  %;" class="center">
+<img src="Images/screenshot035.png" alt="Accuracy and error curves during training" style="width: 100  %;" class="center">
 <p><em>Figure 18: Accuracy and error curves during training</em></p>
 
 
@@ -431,7 +431,10 @@ weighted avg  0.97      0.97      0.97     10196
 
 </code></pre>
 
-<img src="Images/screenshot030.png" alt="Confusion matrix for CNN-LSTM without Early-Stopping" style="width: 100  %;" class="center">
+<p>As can be seen, the model's accuracy and performance increase by approximately one percent compared to the  scenario without Early-Stopping. Additionally, in this case, the model's accuracy, particularly for class 0, improves significantly, and the F1-score exceeds 98%(you can check the codes).</p>
+
+
+<img src="Images/screenshot036.png" alt="Confusion matrix for CNN-LSTM with Early-Stopping" style="width: 100  %;" class="center">
 <p><em>Figure 19: Confusion matrix for CNN-LSTM without Early-Stopping</em></p>
 
 
@@ -453,7 +456,7 @@ weighted avg  0.97      0.97      0.97     10196
 
 <p>Given the high area under the ROC curve and its steepness at the beginning, it can be concluded that this algorithm performs well on the dataset, accurately distinguishing between positive and negative samples.</p>
 
-<img src="Images/screenshot033.png" style="width: 40%;" class="center">
+<img src="Images/screenshot038.png" style="width: 40%;" class="center">
 
 
 <p>Additionally, we considered test data as only the last window of data for comparison. As expected, due to the smaller size and potential noise in test data, the accuracy is lower than the previous scenario (implemented out of curiosity, not in the paper due to low accuracy).</p>
