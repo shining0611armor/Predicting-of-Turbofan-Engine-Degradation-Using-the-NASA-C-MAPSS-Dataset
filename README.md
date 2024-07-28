@@ -6,17 +6,30 @@
 
 <h1>Implementing a Method for Predicting the Remaining Life of Turbofan Engine Degradation Using the NASA C-MAPSS Dataset</h1>
 
-<p>This repository contains the implementation of a method to predict the remaining useful life (RUL) of turbofan engines based on the NASA C-MAPSS dataset. The approach is based on the reference paper by Shcherbakov et al., 2022, and includes data preprocessing, model training, and evaluation steps.</p>
+<p>This repository contains the implementation of a method to predict the remaining useful life (RUL) of turbofan engines based on the NASA C-MAPSS dataset. The approach is based on the reference paper by Shcherbakov et al., 2022, and includes data preprocessing, model training, and evaluation steps. We implement the network for multiple scenarios: regression and classification. For each scenario, we tried three network architectures: CNN-LSTM, LSTM, and CNN. Additionally, we investigate the effect of using early stopping in each case and demonstrate that early stopping provides better results. </p>
 
 <h2>Table of Contents</h2>
-<ul>
-    <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#data-preprocessing">Data Preprocessing</a></li>
-    <li><a href="#dataset-description">Dataset Description</a></li>
-    <li><a href="#model-implementation">Model Implementation</a></li>
-    <li><a href="#results">Results</a></li>
-    <li><a href="#references">References</a></li>
-</ul>
+1. [Introduction](#introduction)
+2. [Dataset](#dataset)
+3. [Methodology](#methodology)
+    1. [Data Preprocessing](#data-preprocessing)
+    2. [Model Architectures](#model-architectures)
+        - [CNN-LSTM](#cnn-lstm)
+        - [LSTM](#lstm)
+        - [CNN](#cnn)
+    3. [Training and Evaluation](#training-and-evaluation)
+        - [Regression](#regression)
+        - [Classification](#classification)
+        - [Early Stopping](#early-stopping)
+4. [Results](#results)
+    1. [Regression Results](#regression-results)
+    2. [Classification Results](#classification-results)
+5. [Conclusion](#conclusion)
+6. [References](#references)
+7. [Usage](#usage)
+    - [Installation](#installation)
+    - [Running the Code](#running-the-code)
+8. [License](#license)
 
 <h2 id="introduction">Introduction</h2>
 
