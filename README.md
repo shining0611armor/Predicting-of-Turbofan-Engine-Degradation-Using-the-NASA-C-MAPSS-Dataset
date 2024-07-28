@@ -481,7 +481,7 @@ weighted avg  0.97      0.97      0.97     10196
 
 <img src="Images/screenshot040.png"  style="width: 20  %;" class="center">
 
-<h4 Second Scenario: Regression with Early-stopping</h4>
+<h4Second Scenario: Regression with Early-stopping</h4>
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
