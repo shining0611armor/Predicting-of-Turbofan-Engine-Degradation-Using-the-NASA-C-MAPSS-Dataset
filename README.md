@@ -10,8 +10,8 @@
 
 ## Table of Contents
 
-2. [Dataset](#dataset)
-3. [Methodology](#methodology)
+1. [Dataset](#dataset)
+2. [Methodology](#methodology)
     1. [Data Preprocessing](#data-preprocessing)
     2. [Model Architectures](#model-architectures)
         - [CNN-LSTM](#cnn-lstm)
@@ -21,15 +21,15 @@
         - [Regression](#regression)
         - [Classification](#classification)
         - [Early Stopping](#early-stopping)
-4. [Results](#results)
+3. [Results](#results)
     1. [Regression Results](#regression-results)
     2. [Classification Results](#classification-results)
-5. [Conclusion](#conclusion)
-6. [References](#references)
-7. [Usage](#usage)
+4. [Conclusion](#conclusion)
+5. [References](#references)
+6. [Usage](#usage)
     - [Installation](#installation)
     - [Running the Code](#running-the-code)
-8. [License](#license)
+7. [License](#license)
 
 <p>The goal of this project is to develop an intelligent maintenance system for turbofan engines. By predicting the remaining useful life of these engines, we can plan maintenance activities more effectively, reduce downtime, and improve overall safety.</p>
 
