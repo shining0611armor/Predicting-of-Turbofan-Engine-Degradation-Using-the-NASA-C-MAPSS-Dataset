@@ -16,9 +16,8 @@ You can quickly access and run this project in Google Colab by clicking the foll
 This includes the implementation of all the mentioned models for both scenarios:
 
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shining0611armor/Predicting-of-Turbofan-Engine-Degradation-Using-the-NASA-C-MAPSS-Dataset
-/blob/main/CMAPSS-remaining life.ipynb)
-
+[![Open in Colab](https://colab.research.google.com/github/shining0611armor/Predicting-of-Turbofan-Engine-Degradation-Using-the-NASA-C-MAPSS-Dataset/blob/main/CMAPSS-remaining%20life.ipynb
+)
 
 
 
