@@ -21,26 +21,26 @@ This includes the implementation of all the mentioned models for both scenarios:
 
 ## Table of Contents
 
-1. [Dataset](#dataset)
-2. [Methodology](#methodology)
-    1. [Data Preprocessing](#data-preprocessing)
-    2. [Model Architectures](#model-architectures)
-        - [CNN-LSTM](#cnn-lstm)
-        - [LSTM](#lstm)
-        - [CNN](#cnn)
-    3. [Training and Evaluation](#training-and-evaluation)
-        - [Regression](#regression)
-        - [Classification](#classification)
-        - [Early Stopping](#early-stopping)
-3. [Results](#results)
-    1. [Regression Results](#regression-results)
-    2. [Classification Results](#classification-results)
-4. [Conclusion](#conclusion)
-5. [References](#references)
-6. [Usage](#usage)
-    - [Installation](#installation)
-    - [Running the Code](#running-the-code)
-7. [License](#license)
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Quick Access in Colab](#quick-access-in-colab)
+3. [Table of Contents](#table-of-contents)
+4. [Data Preprocessing](#data-preprocessing)
+    1. [Dataset Description](#dataset-description)
+    2. [Data Selection](#data-selection)
+    3. [Data Normalization](#data-normalization)
+    4. [Data Labeling](#data-labeling)
+    5. [Time Windowing](#time-windowing)
+5. [Model Training](#model-training)
+    1. [Classification](#classification)
+        1. [First Scenario: Classification with Early-stopping](#first-scenario-classification-with-early-stopping)
+    2. [Regression](#regression)
+        1. [Second Scenario: Regression with Early-stopping](#second-scenario-regression-with-early-stopping)
+6. [References](#references)
+7. [About the Instructor](#about-the-instructor)
+8. [Contact](#contact)
+9. [License](#license)
 
 <p>The goal of this project is to develop an intelligent maintenance system for turbofan engines. By predicting the remaining useful life of these engines, we can plan maintenance activities more effectively, reduce downtime, and improve overall safety.</p>
 
@@ -482,7 +482,7 @@ weighted avg  0.97      0.97      0.97     10196
 <img src="Images/screenshot040.png"  style="width: 20  %;" class="center">
 
 
-<h4>Second Scenario: Regression with Early-stopping</h4>  
+<h3>Second Scenario: Regression with Early-stopping</h3>  
 
 
 
@@ -570,32 +570,6 @@ regression CNN-LSTM with early stopping - last window
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h2 id="model-implementation">Model Implementation</h2>
-
-<p>The implementation includes training a machine learning model to predict the remaining useful life of the engines based on the preprocessed dataset. The model's performance is evaluated using standard metrics to ensure its accuracy and reliability.</p>
-
-<h2 id="results">Results</h2>
-
-<p>The results section showcases the performance of the implemented model, including accuracy, precision, recall, and other relevant metrics. Visualization of the predictions versus actual remaining life is also provided.</p>
-
 <h2 id="references">References</h2>
 
 <ul>
@@ -605,3 +579,17 @@ regression CNN-LSTM with early stopping - last window
 </body>
 </html>
 
+
+## 👩‍🏫 About the Instructor
+
+I am Mehran Tamjidi, a passionate educator and researcher in the field of machine learning and artificial intelligence. This repository is a part of my efforts to provide comprehensive and practical knowledge to students and enthusiasts.
+
+## 📫 Contact
+
+Feel free to reach out if you have any questions or suggestions:
+- **Email**: mehrant.0611@gmail.com
+- **GitHub**: [shining0611armor](https://github.com/shining0611armor)
+
+
+
+Happy Learning! 😊
