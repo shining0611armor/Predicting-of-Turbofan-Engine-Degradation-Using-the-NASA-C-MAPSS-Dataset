@@ -481,7 +481,91 @@ weighted avg  0.97      0.97      0.97     10196
 
 <img src="Images/screenshot040.png"  style="width: 20  %;" class="center">
 
-<h4>Second Scenario: Regression with Early-stopping</h4>
+<h4 id="Second Scenario: Regression with Early-stopping</h4>
+
+
+
+In the algorithm implementation section for regression, the settings are exactly the same as those stated in the Classification section. The only difference is that in the last Dense layer of the model, for the purpose of regression, the Activation function is Linear instead of Sigmoid. Additionally, RMSprop is used instead of Adam.
+Although in the section where the model was used without Early-Stopping, the model did not experience overfitting and performed well with the appropriate adjustment of the Learning-rate values, it is possible that sometimes we might encounter overfitting without Early-Stopping. In this case, we add an Early-Stopping section to the model's callback. All other settings and hyperparameters remain the same as before. By doing this, the model will stop when the validation loss increases. This approach yields the best results, and the outcome has improved compared to the previous state.
+
+
+
+<img src="Images/screenshot047.png" alt="Adding Early-Stopping to the Callback Section of the CNN-LSTM Model" style="width: 100  %;" class="center">
+<p><em>Figure 21: Adding Early-Stopping to the Callback Section of the CNN-LSTM Model</em></p>
+
+In this case, considering Early-Stopping, the model stops at its optimal state before a significant increase in validation loss at Epoch 80.
+
+
+<img src="Images/screenshot048.png" alt="MSE and MAE Error Curves for train and validation" style="width: 100  %;" class="center">
+<p><em>Figure 22: MSE and MAE Error Curves for train and validation</em></p>
+
+we can consider all windows the result is as bellow:
+<pre><code>
+    
+		RMSE:  16.49428816371336
+		MSE:  272.0615420276147
+		MAE:  11.728722985139685
+		MAPE:  12.93224651355339
+		regression CNN-LSTM with early stopping
+</code></pre>
+
+<img src="Images/screenshot050.png"  style="width: 20  %;" class="center">
+
+
+Now, if we only use the last window, the number of test data will be reduced to 100, and the results will be as follows (the results would be better).
+
+
+<pre><code>
+    
+		RMSE:  14.465046204641993
+		MSE:  209.2375617024277
+		MAE:  11.103071579933166
+		MAPE:  16.74996404019945
+		regression CNN-LSTM with early stopping - last window
+</code></pre>
+
+<img src="Images/screenshot051.png"  style="width: 20  %;" class="center">
+
+
+The values of the considered metrics in this state are close to the values reported in the paper.
+
+
+
+
+<img src="Images/screenshot052.png" alt="The plot of the actual and estimated RUL curve for the case with Early-Stopping" style="width: 100  %;" class="center">
+<p><em>Figure 23: The plot of the actual and estimated RUL curve for the case with Early-Stopping</em></p>
+
+
+The same plot can be displayed in ascending order, following the format of the paper.
+
+
+
+<img src="Images/screenshot053.png" alt="Display the estimated and actual RUL values in ascending order for the case with Early-Stopping " style="width: 100  %;" class="center">
+<p><em>Figure 24: Display the estimated and actual RUL values in ascending order for the case with Early-Stopping </em></p>
+
+We will restate the exact analyses mentioned in the previous section here.
+
+ It is observed that the MSE and MAE errors decrease during the training and evaluation process. The obtained MSE and MAE values, along with other considered metrics, are close to the values reported in the paper.
+
+Typically, we expect that using all windows would provide a better metric for evaluating the test data, as considering only the last window could be more susceptible to noise. However, in this example, according to the provided  curve, it is observed that with an increase in the RUL value, and especially in the middle values, the error increases from the actual values due to the higher RUL values (while it should be noted that the actual and estimated RUL values are quite close to each other, and the obtained curve matches well with the curve obtained in the paper).
+
+Therefore, considering only the last window, which has the lowest RUL, can provide less error compared to considering all windows. Thus, in fewer cycles (especially in the middle cycles due to larger RUL values), the probability of error increases, which is why the paper uses the last window for evaluation and achieving better results. This can be inferred from our results as well, where using the last window provided better results compared to using all windows.
+
+The result obtained in this section, using Early-Stopping and the CNN-LSTM model, provides the optimal and closest result to the paper.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
