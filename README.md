@@ -467,6 +467,7 @@ weighted avg       0.96      0.96      0.96     10196
 
 
 
+<img src="https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/raw/main/images/screenshot012.png" alt="generated images for the second dataset" width="400">
 
 
 
