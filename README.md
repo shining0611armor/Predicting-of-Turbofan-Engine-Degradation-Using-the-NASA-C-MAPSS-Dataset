@@ -432,7 +432,7 @@ weighted avg  0.97      0.97      0.97     10196
 <p>As can be seen, the model's accuracy and performance increase by approximately one percent compared to the  scenario without Early-Stopping. Additionally, in this case, the model's accuracy, particularly for class 0, improves significantly, and the F1-score exceeds 98%(you can check the codes).</p>
 
 
-<img src="Images/screenshot036.png" alt="Confusion matrix for CNN-LSTM with Early-Stopping" width="700">
+<img src="Images/screenshot036.png" alt="Confusion matrix for CNN-LSTM with Early-Stopping" width="550">
 <p><em>Figure 19: Confusion matrix for CNN-LSTM without Early-Stopping</em></p>
 
 
