@@ -502,11 +502,11 @@ In this case, considering Early-Stopping, the model stops at its optimal state b
 we can consider all windows the result is as bellow:
 <pre><code>
     
-		RMSE:  16.49428816371336
-		MSE:  272.0615420276147
-		MAE:  11.728722985139685
-		MAPE:  12.93224651355339
-		regression CNN-LSTM with early stopping
+RMSE:  16.49428816371336
+MSE:  272.0615420276147
+MAE:  11.728722985139685
+MAPE:  12.93224651355339
+regression CNN-LSTM with early stopping
 </code></pre>
 
 <img src="Images/screenshot050.png"  style="width: 20  %;" class="center">
@@ -517,11 +517,11 @@ Now, if we only use the last window, the number of test data will be reduced to 
 
 <pre><code>
     
-		RMSE:  14.465046204641993
-		MSE:  209.2375617024277
-		MAE:  11.103071579933166
-		MAPE:  16.74996404019945
-		regression CNN-LSTM with early stopping - last window
+RMSE:  14.465046204641993
+MSE:  209.2375617024277
+MAE:  11.103071579933166
+MAPE:  16.74996404019945
+regression CNN-LSTM with early stopping - last window
 </code></pre>
 
 <img src="Images/screenshot051.png"  style="width: 20  %;" class="center">
