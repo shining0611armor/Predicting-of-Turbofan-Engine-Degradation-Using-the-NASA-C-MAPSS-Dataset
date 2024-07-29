@@ -19,6 +19,46 @@ This includes the implementation of all the mentioned models for both scenarios:
 
 
 
+## Summary of Results and Final Comparison
+
+The comparison of the results  demonstrates the superiority of the proposed model (LSTM-CNN) as presented in the paper, compared to other structures. This supports the claim of the paper and is evident in both the Classification and Regression tasks.
+
+Additionally, the accuracies obtained in both the Classification and Regression sections are close to and similar to those reported in the paper.
+
+### Comparison of Results in the Classification Section
+
+| Model                   | Without Early stopping | With Early stopping | CNN   | LSTM  |
+|-------------------------|------------------------|---------------------|-------|-------|
+| Precision               | 0.9773                 | 0.9769              | 0.9832| 0.9747|
+| Recall                  | 0.9820                 | 0.9863              | 0.9735| 0.9882|
+| F1-Score                | 0.9796                 | 0.9816              | 0.9784| 0.9814|
+| Accuracy                | 0.9628                 | 0.9662              | 0.9607| 0.9659|
+
+Based on the table above, the CNN-LSTM model has the highest F1-Score and Accuracy. This model also performs better than the basic LSTM model in these metrics. The CNN model, although providing higher Precision, has lower F1-Score and Accuracy compared to the other models. Nevertheless, all models have achieved high percentages, close to the values reported in the paper. without using Early-stopping, the accuracy decreases due to reasons explained in the corresponding section. Detailed metrics are provided in each section of the report.
+
+### Comparison of Results in the Regression Section for the Last Window
+
+| Model                   | Without Early stopping | With Early stopping | CNN   | LSTM  |
+|-------------------------|------------------------|---------------------|-------|-------|
+| RMSE                    | 15.83                  | 14.46               | 15.99 | 15.02 |
+| MSE                     | 250.67                 | 209.23              | 255.73| 225.76|
+| MAE                     | 11.61                  | 11.10               | 12.19 | 10.37 |
+| MAPE                    | 17.32                  | 16.74               | 25.78 | 15.44 |
+
+Based on the table above and the results, the optimal CNN-LSTM model proposed in the paper with Early-stopping provides the best results. The values obtained are very close to those reported in the paper. The standalone LSTM model, although achieving good results, performs worse than the optimal model proposed in the paper. The CNN model shows higher errors in the metrics compared to the previous models, with implemented values close to or better than those reported in the paper. Comparing the first and second columns indicates the benefits of using Early-stopping in reducing overfitting and achieving better accuracy (lower errors) on the test data.
+
+### Comparison of Results in the Regression Section for All Windows
+
+| Model                   | Without Early stopping | With Early stopping | CNN   | LSTM  |
+|-------------------------|------------------------|---------------------|-------|-------|
+| RMSE                    | 17.75                  | 16.49               | 17.69 | 17.87 |
+| MSE                     | 315.28                 | 272.06              | 312.93| 319.60|
+| MAE                     | 12.56                  | 11.72               | 13.63 | 11.80 |
+| MAPE                    | 13.62                  | 12.93               | 17.03 | 13.66 |
+
+Using all windows generally provides lower accuracy compared to using only the last window, which aligns with the explanations provided in previous sections.
+
+
 ## Table of Contents
 
 
