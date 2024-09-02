@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+         
 <body>
-        
+          
   
 <h1>Implementing a Method for Predicting the Remaining Life of Turbofan Engine Degradation Using the NASA C-MAPSS Dataset</h1>
 
