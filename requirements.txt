@@ -1,0 +1,13 @@
+# Dependencies for CMAPSS-remaining life.ipynb
+# Install with: pip install -r requirements.txt
+
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+tensorflow>=2.0
+gdown
+
+# Needed to run the notebook locally (already provided on Google Colab)
+notebook
